@@ -1,0 +1,27 @@
+.DS_Store
+.idea/
+.metadata
+*.iml
+*.class
+*.jar
+.DS_Store
+proto/gen-*
+logs
+**/target/*
+target
+
+#eclipse and myeclipse
+.settings
+.classpath
+.project
+.myeclipse
+.mymetadata
+
+## File-based project format
+*.ipr
+*.iml
+*.iws
+*/src/main/resources/dubbo.properties
+**/caches/*.cache*
+*.bak
+
