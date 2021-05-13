@@ -137,6 +137,20 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+
+
+        <!-- Tomcat插件  启动方式为 该pom所在目录下 执行 clean tomcat7:run-->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <path>/</path>
+                    <port>8080</port>
+                    <uriEncoding>UTF-8</uriEncoding>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>
