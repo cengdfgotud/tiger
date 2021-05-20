@@ -137,8 +137,6 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
-
-
         <!-- Tomcat插件  启动方式为 该pom所在目录下 执行 clean tomcat7:run-->
         <plugins>
             <plugin>
