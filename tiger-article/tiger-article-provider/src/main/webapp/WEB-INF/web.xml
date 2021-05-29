@@ -33,38 +33,22 @@
                 </param-value>
         </context-param>
         <listener>
+                <listener-class>com.alibaba.dubbo.remoting.http.servlet.BootstrapListener</listener-class>
+        </listener>
+        <listener>
                 <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
         </listener>
         <!--spring监听器结束-->
-        <!--springMvc配置开始-->
         <servlet>
-                <servlet-name>spring</servlet-name>
-                <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-                <init-param>
-                        <param-name>contextConfigLocation</param-name>
-                        <param-value>classpath:spring-mvc.xml</param-value>
-                </init-param>
+                <servlet-name>dispatcher</servlet-name>
+                <servlet-class>com.alibaba.dubbo.remoting.http.servlet.DispatcherServlet</servlet-class>
                 <load-on-startup>1</load-on-startup>
-                <async-supported>true</async-supported>
         </servlet>
+
         <servlet-mapping>
-                <servlet-name>spring</servlet-name>
+                <servlet-name>dispatcher</servlet-name>
                 <url-pattern>/</url-pattern>
         </servlet-mapping>
-        <!--springMvc配置结束-->
+
         <!--spring配置文件结束-->
-
-
-        <!--　该servlet为tomcat,jetty等容器提供,将静态资源映射从/改为/static/目录，如原来访问　http://localhost/foo.css　,现在http://localhost/static/foo.css　-->
-        <!--
-             不拦截静态文件
-             spring配置文件中需添加 <mvc:default-servlet-handler default-servlet-name="default"/>
-        -->
-        <servlet-mapping>
-                <servlet-name>default</servlet-name>
-                <url-pattern>/js/*</url-pattern>
-                <url-pattern>/css/*</url-pattern>
-                <url-pattern>/images/*</url-pattern>
-                <url-pattern>/fonts/*</url-pattern>
-        </servlet-mapping>
 </web-app>
