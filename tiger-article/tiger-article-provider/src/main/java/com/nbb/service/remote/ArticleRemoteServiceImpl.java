@@ -1,13 +1,11 @@
 package com.nbb.service.remote;
 
-import com.google.common.collect.Maps;
 import com.nbb.bean.Article;
 import com.nbb.dao.ArticleMapper;
 import com.nbb.itf.remote.ArticleRemoteService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Map;
 
 /**
  * Created by yuqi on 2017/5/23.

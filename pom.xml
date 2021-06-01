@@ -20,7 +20,9 @@
 	</dependencies>
 	
 	<modules>
+        <module>tiger-config</module>
         <module>tiger-article</module>
+        <module>tiger-user</module>
     </modules>
 	
     <build>
