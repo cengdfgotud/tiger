@@ -1,5 +1,6 @@
 package com.nbb.service.remote;
 
+
 import com.nbb.bean.Article;
 import com.nbb.dao.ArticleMapper;
 import com.nbb.itf.remote.ArticleRemoteService;
