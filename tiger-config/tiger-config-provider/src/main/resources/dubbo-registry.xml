@@ -8,14 +8,14 @@
     http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="hello-world-app"  />
+    <dubbo:application name="${dubbo.application.name}"  />
 
     <!-- 使用zookeeper注册中心暴露服务地址 -->
-    <dubbo:registry address="zookeeper://localhost:2181" />
+    <dubbo:registry address="${zk.registry.address}" />
 
-    <!-- 用dubbo协议在20880端口暴露服务 -->
-    <dubbo:protocol name="dubbo" port="20880" />
+    <!-- 用dubbo协议生产环境在20880端口暴露服务,其他环境随机端口 -->
+    <dubbo:protocol name="dubbo" port="${dubbo.protocol.dubbo}" />
 
-    <!--rest协议在8080端口提供服务-->
-    <dubbo:protocol name="rest"  contextpath="services" server="servlet" port="8080"/>
+    <!--rest协议生产环境在8055端口提供服务,其他环境根据配置修改端口-->
+    <dubbo:protocol name="rest"  contextpath="services" server="servlet" port="${dubbo.protocol.rest}"/>
 </beans>

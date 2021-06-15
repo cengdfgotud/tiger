@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>com.nbb</groupId>
-            <artifactId>cat</artifactId>
+            <artifactId>tiger-config-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
